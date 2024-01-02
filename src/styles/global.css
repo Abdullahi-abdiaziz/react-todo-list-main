@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+body {
+  background-color: #191919;
+  color: #f2f2f2;
+  min-height: 100vh;
+}
+button {
+  cursor: pointer;
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f2f2f2 #545454;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #545454;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}

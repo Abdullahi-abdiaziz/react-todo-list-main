@@ -1,0 +1,69 @@
+.task {
+  background: #262626;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.taskid {
+  padding: 16px;
+  flex: 2;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.taskid:hover p{
+  color: #f9f9f94d;
+}
+.task p {
+  font-size: 13px;
+  line-height: 19px;
+  color: #f2f2f2;
+  margin-right: auto;
+  transition: 0.3s;
+}
+p.taskCompleted {
+  color: #808080;
+  text-decoration: line-through;
+}
+.checkContainer {
+  width: 18px;
+  height: 18px;
+  background: none;
+  border: none;
+}
+.checkContainer > * {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  border: 1.5px solid #4fa8df;
+  margin-right: 20px;
+}
+.checkContainer .check {
+  border: none;
+}
+.checkContainer svg {
+  width: 100%;
+  height: 100%;
+  color: #5e60ce;
+}
+
+.deleteButton {
+  padding: 16px 16px 16px 0;
+  color: #808080;
+  background: #262626;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.deleteButton:hover {
+  color: red;
+}
+
+@media (width <= 450) {
+    
+}
