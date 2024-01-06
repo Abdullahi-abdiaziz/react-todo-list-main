@@ -2,6 +2,7 @@ import todoLogo from "/todoLogo.svg";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import styles from "./header.module.css";
 import React from "react";
+import { motion } from "framer-motion";
 
 export function Header({ onAddTask }) {
   const [title, setTitle] = React.useState("");
@@ -17,9 +18,15 @@ export function Header({ onAddTask }) {
     setTitle(event.target.value);
   }
 
+  const animations = {
+    initial: { scale: 0, y: -200, opacity: 0 },
+    animate: { scale: 1, y: 0, opacity: 1 },
+    transition: { type: "spring", stiffness: 900, damping: 60 },
+  };
+
   return (
     <header className={styles.header}>
-      <img src={todoLogo} alt="" />
+      <motion.img {...animations} src={todoLogo} alt="" />
       <form onSubmit={handleSubmit} className={styles.newTaskForm}>
         <input
           type="text"
@@ -27,10 +34,10 @@ export function Header({ onAddTask }) {
           value={title}
           onChange={onChangeTitle}
         />
-        <button>
+        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           create
           <AiOutlinePlusCircle size={20} />
-        </button>
+        </motion.button>
       </form>
     </header>
   );
